@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Poppins-bold';
+    src: url(/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+
+:root {
+    --blueberry: #6155e1;
+    --strawberry: #e93460;
+    --strawberry-hover: #e93461db;
+    --strawberry-active: #e93461b3;
+    --tran-04: all 0.4s ease;
+}
+
+.conteiner-prin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--blueberry);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-vector2 {
+    position: relative;
+
+}
+
+.container-vector2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/img/login/Vector 2.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+}
+
+.container-vector1 {
+    position: relative;
+}
+
+.input-login{
+    color: #1a1a1a;
+}
+
+.container-vector1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/img/login/Vector 1.svg');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+}
+
+.title-login {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0px 12px;
+    margin-top: 0;
+}
+
+.container-input-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 384px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: transparent;
+    background: #FFF;
+    margin: 2%;
+}
+
+.container-input-login span {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--strawberry);
+}
+
+.input-login {
+    font-family: Poppins;
+    width: 100%;
+    height: 48px;
+    border: transparent;
+    background: #FFF;
+    border-radius: 8px;
+    padding: 0px 12px;
+    border: transparent;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+
+}
+
+.input-login:active,
+.input-login:focus {
+    border-color: #0d6efd;
+    outline: 0;
+}
+
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin: 10% 2% 0 2%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    transition: var(--tran-04);
+    border: transparent;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+    background-color: var(--strawberry-hover);
+    border: transparent;
+}
+
+.btn-submit:active {
+    background-color: var(--strawberry-active);
+    border: transparent;
+}
+
+
+.btn-submit button {
+    color: #FFF;
+    width: 100%;
+    background: var(--strawberry);
+    text-align: center;
+    border: transparent;
+    font-family: 'Poppins';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.alert-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--tran-04);
+
+}
+
+.alert {
+    padding: 0 12px;
+    max-width: calc(384px - 2%);
+    height: 48px;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    color: white;
+    background-color: var(--strawberry);
+    font-size: 18px;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+    font-family: "Poppins";
+}
+
+.alert.active {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.alert i {
+    margin-right: 8px;
+}
+
+.alert p {
+}
+
+#togglePassword svg{
+    width: 100%;
+}
