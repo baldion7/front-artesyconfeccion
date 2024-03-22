@@ -7,8 +7,12 @@ export const ImgTrazo = ({molds}) => {
         <h1>TRAZOS</h1>
         </div>
         {molds && molds.length > 0 ? (
-          <img src={molds[0].img_route} alt="" loading="lazy" />
+            <div style={{width: '100%'}}>
+                <img src={molds[0].img_route} alt="" loading="lazy"/>
+            </div>
+
         ) : null}
-      </div></>
+      </div>
+    </>
   )
 }
