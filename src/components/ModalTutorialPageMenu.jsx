@@ -12,11 +12,11 @@ export const ModalTutorialPageMenu = ({popup_2,popup_3,CloseModa}) => {
       <div className={`popup popup-video ${popup_2===true ? 'active' : ''}`} id="popup_2">
         <div className="popup-scroll">
           <div className="popup-header">
-            <h2 className="card-title">Menú lateral derecho</h2>
+            <h2 className="card-title">Menú lateral izquierdo</h2>
             <div className="popup-body-video">
               <p className="popup-body-text">En el menú izquierdo podrás encontrar las categorías de las prendas de
                 vestir.</p>
-              <img className="popup-body-video-text-img-medium" src="/img/menu/zoom.gif" loading="lazy" alt="if"/>
+              <img className="popup-body-video-text-img-medium" src="/img/menu/tutorial-menu-1.gif" loading="lazy" alt="if"/>
             </div>
           </div>
           <div className="popup-footer">
@@ -32,7 +32,7 @@ export const ModalTutorialPageMenu = ({popup_2,popup_3,CloseModa}) => {
             <div className="popup-body-video">
               <p className="popup-body-text">En la barra de búsqueda podrás buscar prendas por su nombre, referencia o
                 categoría.</p>
-              <img className="popup-body-video-text-img-medium" src="/img/menu/zoom.gif" loading="lazy" alt="if"/>
+              <img className="popup-body-video-text-img-medium" src="/img/menu/tutorial-menu-2.gif" loading="lazy" alt="if"/>
             </div>
           </div>
           <div className="popup-footer">
@@ -48,7 +48,7 @@ export const ModalTutorialPageMenu = ({popup_2,popup_3,CloseModa}) => {
             <div className="popup-body-video">
               <p className="popup-body-text">En el menú, puedes encontrar todas las prendas por categoría o aquellas que
                 coincidan con tu búsqueda. </p>
-              <img className="popup-body-video-text-img-medium" src="/img/menu/zoom.gif" loading="lazy" alt="if"/>
+              <img className="popup-body-video-text-img-medium" src="/img/menu/tutorial-menu-2.gif" loading="lazy" alt="if"/>
             </div>
           </div>
           <div className="popup-footer">

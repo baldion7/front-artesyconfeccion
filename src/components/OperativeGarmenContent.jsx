@@ -12,7 +12,7 @@ export const OperativeGarmenContent = ({operative}) => {
   return (
     <>
       <div className="contenet-trazo-info">
-        <div className="instructions-garment" style={{width: 'auto'}} id="instructions_garment">
+        <div className="instructions-garment" style={{width: '100%'}} id="instructions_garment">
       <div className="instructions-garment-content" id="proceso_operativo">
         <h1>Proceso operativo</h1>
           {user.role === 'Editor' ?  <BtnOperationSpaciEditor message={"Agregar otro punto"} SetNewOperation={SetNewOperation}/>:null}

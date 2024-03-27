@@ -13,13 +13,11 @@ export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
         <div className="popup-scroll">
           <div className="popup-header">
             <h2 className="card-title">Prendas interactivas</h2>
-            <div className="popup-body popup-body-img-medium">
+            <div className="popup-body-video">
               <p className="popup-body-text">Dando click en los botones rojos podrás ver los detalles de la confección
                 de
                 la prenda.</p>
-              <button tabIndex="-1" aria-hidden="true" className="bubble-exp" id="btn1" data-index="1">
-
-              </button>
+                <img className="popup-body-video-text-img-medium" src="/img/prenda/botones-detalles.png" loading="lazy" alt="Botones detalles"/>
             </div>
           </div>
           <div className="popup-footer">
@@ -33,8 +31,7 @@ export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
           <div className="popup-header">
             <h2 className="card-title">Herramienta de zoom</h2>
             <div className="popup-body-video">
-              <p className="popup-body-text">Al pasar el mouse sobre la imagen dentro del detalle de la prenda podras
-                hacer zoom.</p>
+              <p className="popup-body-text">Al pasar el mouse sobre la imagen dentro del detalle de la prenda podrás hacer zoom.</p>
               <img className="popup-body-video-text-img-medium" src="/img/menu/zoom.gif" loading="lazy" alt="Gif"/>
             </div>
           </div>
@@ -49,7 +46,7 @@ export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
           <div className="popup-header">
             <h2 className="card-title">Video tutorial</h2>
             <div className="popup-body-video">
-              <p className="popup-body-text">Al hacer click sobre la imagen del video podras ver un video tutorial
+              <p className="popup-body-text">Al hacer click sobre la imagen del video podrás ver los videos tutoriales
                 sobre
                 la confección de la prenda.</p>
               <img className="popup-body-video-text-img-medium" src="/img/prenda/Frame 5.png" loading="lazy" alt="Gif"/>

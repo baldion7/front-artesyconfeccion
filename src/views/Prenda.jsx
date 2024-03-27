@@ -247,25 +247,6 @@ export const Prenda = () => {
                 {recommendGarment ? <CardGarmentMenu garment={recommendGarment} numbeRamdon={numbeRamdon}/> : null}
               </div>
             </div>
-            <div className="floating-container">
-              <div className="floating-button">+</div>
-              <div className="element-container">
-            <span className="float-element material-symbols-outlined zoom-in">
-              <i className="material-icons">zoom_in</i>
-            </span>
-                <span className="float-element zoom-out">
-              <i className="material-icons">zoom_out</i>
-            </span>
-                <Link to="/">
-              <span className="float-element ">
-                <i className="material-icons">home</i>
-              </span>
-                </Link>
-                <span className="float-element">
-              <i className="material-icons generatePdf">picture_as_pdf</i>
-            </span>
-              </div>
-            </div>
           </div>
         </div>
         : <Loader/>

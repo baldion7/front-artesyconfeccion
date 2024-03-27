@@ -24,6 +24,7 @@ body {
 }
 
 .loader {
+    height: 100vh;
     background-color: var(--background);
     position: absolute;
     top: 0;

@@ -56,7 +56,7 @@
 .body-prenda {
     background: var(--blueberry);
     margin: 0%;
-    width: 100vw;
+    width: 100%;
 }
 
 .body-prenda::-webkit-scrollbar {
@@ -366,11 +366,11 @@ a.all-garments-icons {
     line-height: 64px;
 }
 
-.videos-tutoriasl h2 {
+.videos-tutoriasl h2 {  
+    margin-top: 16px;
     color: #000;
     font-family: "Poppins";
     font-weight: 700;
-    line-height: 64px;
 }
 
 #videoPlayer {
@@ -1107,6 +1107,7 @@ p.popup-body-video-text {
     .instructions-garment-content h1:nth-of-type(1),
     .videos-tutoriasl h1:nth-of-type(1) {
         color: #000;
+        margin-bottom: 10px;
         font-size: 25px;
         font-family: "Poppins";
         font-weight: 700;
@@ -1114,6 +1115,7 @@ p.popup-body-video-text {
     }
 
     .videos-tutoriasl h2 {
+        line-height: normal;
         font-size: 18px;
     }
 
