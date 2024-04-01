@@ -5,6 +5,8 @@ export const CardGarment = ({opcion,garment,img}) => {
   const Garment=(e)=>{
     const indextemp = e.currentTarget.getAttribute("data-index");
     navigate('/prenda/'+indextemp)
+    //Se recarga la página para solucionar el problema de navegación en prendas similares, buscar otra opción 
+    window.location.reload()
   }
   return (
     <>
