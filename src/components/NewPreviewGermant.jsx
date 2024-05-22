@@ -52,7 +52,7 @@ const sendGarment= () =>{
 
   const handleGarmentImg = async (Name, Image,Garment ) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/imggarment', {
+        const response = await fetch('https://arteyconfecciones.com/api/imggarment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
