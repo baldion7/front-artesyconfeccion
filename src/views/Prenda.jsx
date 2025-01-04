@@ -22,6 +22,7 @@ export const Prenda = () => {
   const { id } = useParams()
   const modal = useSelector((state) => state.user.modal.modalgarment)
   const [garment, setGarment] = useState(null)
+
   const [blur, setBlur] = useState(null)
   const [popup, setPopup] = useState(null)
   const [popup_2, setPopup_2] = useState(null)
@@ -99,36 +100,24 @@ export const Prenda = () => {
       return () => clearTimeout(timer)
     }
   }, [isVisible])
+
   const changeRecommend = (data) => {
-    let numeros = []
-    let numerosAleatorios = []
-    let ruta = data
-    setRecommendGarment(obtenerElementosAleatorios(data, 5))
-    setNumbeRamdon(5)
-    /*if (data.length < 5) {
-      setRecommendGarment(data)
+    // Si hay menos de 5 elementos, retornamos todos
+    if (data.length <= 5) {
+      setRecommendGarment(data);
+      setNumbeRamdon(data.length);
+      return;
+    }
 
-    } else {
-      ruta.forEach((item) => {
-        numeros.push(item.Id)
-        while (numeros.length > 0) {
-          for (var i = 0; i <= 5; i++) {
-            var indiceAleatorio = Math.floor(Math.random() * numeros.length)
-            var numeroAleatorio = numeros[indiceAleatorio]
-            numerosAleatorios.push(numeroAleatorio)
-            numeros.splice(indiceAleatorio, 1)
-            setNumbeRamdon(numerosAleatorios)
-          }
-        }
-      })
-      setRecommendGarment(numerosAleatorios)
-      }
-      */
+    // Si hay más de 5 elementos, seleccionamos 5 aleatorios
+    const elementosSeleccionados = obtenerElementosAleatorios(data, 5);
+    setRecommendGarment(elementosSeleccionados);
+    setNumbeRamdon(5);
+  };
 
-  }
-
+// Mantener la función obtenerElementosAleatorios como está
   const obtenerElementosAleatorios = (array, cantidad) => {
-    const copiaArray = [...array]; // Crear una copia del array para no modificar el original
+    const copiaArray = [...array];
     const elementosAleatorios = [];
 
     while (elementosAleatorios.length < cantidad && copiaArray.length > 0) {
@@ -139,6 +128,7 @@ export const Prenda = () => {
 
     return elementosAleatorios;
   };
+
   const changeImgGarmentsButton = () => {
     garment.imggarments.forEach((item) => {
       if (item.Name !== imgBtnChange) {
