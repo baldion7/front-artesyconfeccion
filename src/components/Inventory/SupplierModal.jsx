@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from "../ui/button.js";
+import {Button} from "../ui/button.tsx";
 import {Card, CardHeader, CardContent, CardTitle} from "../ui/card";
 
 const SupplierModal = ({supplier, isOpen, onClose}) => {

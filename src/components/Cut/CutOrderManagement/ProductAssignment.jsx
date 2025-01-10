@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {ArrowLeft, Save} from 'lucide-react';
 import {Card, CardHeader, CardTitle, CardContent} from '../../ui/card';
-import {Button} from '../../ui/button.js';
+import {Button} from '../../ui/button.tsx';
 import CardAssignment from './CardAssignment'; // Importamos el componente reutilizable
 
 export const ProductAssignment = ({order, onBack}) => {
