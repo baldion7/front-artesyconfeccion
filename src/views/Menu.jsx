@@ -1,4 +1,4 @@
-import '../styles/menu.css'
+import '../styles/Menu.css'
 import { NavMenuLeft } from '../components/Garment/NavMenuLeft.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { CardGarmentMenu } from '../components/Garment/CardGarmentMenu.jsx'
