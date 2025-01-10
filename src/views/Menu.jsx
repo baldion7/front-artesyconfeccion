@@ -1,12 +1,12 @@
 import '../styles/menu.css'
-import { NavMenuLeft } from '../components/NavMenuLeft.jsx'
+import { NavMenuLeft } from '../components/Garment/NavMenuLeft.jsx'
 import { useEffect, useRef, useState } from 'react'
-import { CardGarmentMenu } from '../components/CardGarmentMenu.jsx'
-import { ModalLogout } from '../components/ModalLogout.jsx'
-import { ModalTutorialPageMenu } from '../components/ModalTutorialPageMenu.jsx'
+import { CardGarmentMenu } from '../components/Garment/CardGarmentMenu.jsx'
+import { ModalLogout } from '../components/Garment/ModalLogout.jsx'
+import { ModalTutorialPageMenu } from '../components/Garment/ModalTutorialPageMenu.jsx'
 import { useSelector } from 'react-redux'
-import { AlertError } from '../components/AlertError.jsx'
-import { ModalNewCategory } from '../components/ModalNewCategory.jsx'
+import { AlertError } from '../components/Garment/AlertError.jsx'
+import { ModalNewCategory } from '../components/Garment/ModalNewCategory.jsx'
 export const Menu = () => {
   const [garment, setGarment] = useState(null)
   const [NewCategory, setNewCategory] = useState()
@@ -87,9 +87,7 @@ export const Menu = () => {
   async function searchGarment(e) {
     e.preventDefault();
     const value=(e.target.value)
-    console.log(value)
     if (value.length > 2){
-      console.log(value)
       try {
         const response = await fetch('https://arteyconfecciones.com/api/search/garment', {
           method: 'POST',
@@ -101,7 +99,6 @@ export const Menu = () => {
 
         if (response.ok) {
           const data = await response.json();
-          console.log(data)
           if (data.length!==0) {
             setSearch(data)
           } else {

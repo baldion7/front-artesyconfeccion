@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import '../styles/drift-basic.css'
+import '../../styles/drift-basic.css'
 export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
   const unmountRef = useRef();
   const [details, setDetails] = useState(null)

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { addUser } from '../redux/slice/userSlice.js'
+import { addUser } from '../../redux/slice/userSlice.js'
 
 export const ModalLogout = ({open,setOpen}) => {
   const dispatch = useDispatch()

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NewPreviewGermant } from '../components/NewPreviewGermant.jsx'
+import { NewPreviewGermant } from '../components/Garment/NewPreviewGermant.jsx'
 
 export const NewGarment = () => {
   return (

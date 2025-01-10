@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { addUser } from '../redux/slice/userSlice.js'
-import { AlertError } from '../components/AlertError.jsx'
+import { AlertError } from '../components/Garment/AlertError.jsx'
 
 
 export const Login = () => {
@@ -27,6 +27,7 @@ export const Login = () => {
   }
 
   useEffect(() => {
+    console.log(user.role)
     switch (user.role) {
       case 'Planta':
         return navigate('/Menu')
@@ -34,6 +35,12 @@ export const Login = () => {
         return navigate('/Menu')
       case 'Editor':
         return navigate('/Editor')
+      case 'Corte':
+        return navigate('/orden/corde')
+      case 'Administrador':
+        return navigate('/calidad/corte')
+      default:
+        return
     }
   }, [user])
 

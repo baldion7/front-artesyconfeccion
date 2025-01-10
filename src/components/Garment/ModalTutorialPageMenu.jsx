@@ -1,4 +1,4 @@
-import { stateModal } from '../redux/slice/modalSlice.js'
+import { stateModal } from '../../redux/slice/modalSlice.js'
 import { useDispatch } from 'react-redux'
 
 export const ModalTutorialPageMenu = ({popup_2,popup_3,CloseModa}) => {

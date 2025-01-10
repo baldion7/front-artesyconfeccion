@@ -34,7 +34,7 @@ export const VideoTutorialConteiner = ({ isVisible, setIsVisible, id, setMsg }) 
     <>
       <div className="video-tutorial" onClick={toggleVideo}>
         <div className="video-tutorial-contenido" id="video_tutorial_contenido">
-          {displayImg === false ? <img src="/img/prenda/Frame 5.png" loading="lazy" alt=""/> :
+          {displayImg === false ? <img src="/img/prenda/Frame%205.png" loading="lazy" alt=""/> :
             <div className="videos-tutoriasl"><h1>Videos tutoriales</h1>
               <PrintVideosTurorial response={video}/>
             </div>

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { stateModalGarment } from '../redux/slice/modalSlice.js'
+import { stateModalGarment } from '../../redux/slice/modalSlice.js'
 import { FaMagnifyingGlassPlus } from 'react-icons/fa6'
 
 export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
@@ -49,7 +49,7 @@ export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
               <p className="popup-body-text">Al hacer click sobre la imagen del video podrás ver los videos tutoriales
                 sobre
                 la confección de la prenda.</p>
-              <img className="popup-body-video-text-img-medium" src="/img/prenda/Frame 5.png" loading="lazy" alt="Gif"/>
+              <img className="popup-body-video-text-img-medium" src="/img/prenda/Frame%205.png" loading="lazy" alt="Gif"/>
             </div>
           </div>
           <div className="popup-footer">

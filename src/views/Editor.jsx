@@ -1,11 +1,11 @@
 import '../styles/Editor.css'
 import { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { NavMenuLeft } from '../components/NavMenuLeft.jsx'
-import { CardGarmentMenu } from '../components/CardGarmentMenu.jsx'
-import { ModalLogout } from '../components/ModalLogout.jsx'
-import { ModalTutorialPageMenu } from '../components/ModalTutorialPageMenu.jsx'
-import { AlertError } from '../components/AlertError.jsx'
+import { NavMenuLeft } from '../components/Garment/NavMenuLeft.jsx'
+import { CardGarmentMenu } from '../components/Garment/CardGarmentMenu.jsx'
+import { ModalLogout } from '../components/Garment/ModalLogout.jsx'
+import { ModalTutorialPageMenu } from '../components/Garment/ModalTutorialPageMenu.jsx'
+import { AlertError } from '../components/Garment/AlertError.jsx'
 export const Editor = () => {
   const [garment, setGarment] = useState(null)
   const [category, setCategory] = useState(null)
