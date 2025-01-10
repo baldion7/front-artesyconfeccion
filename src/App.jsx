@@ -8,13 +8,6 @@ import {useEffect} from 'react'
 import {Editor} from './views/Editor.jsx'
 import {AuthEdit} from './middleware/AuthEdit.jsx'
 import {NewGarment} from './views/NewGarment.jsx'
-import {Supplier} from "./views/Supplier.jsx";
-import {Productos} from "./views/Productos.jsx";
-import {Movimientos} from "./views/Movimientos.jsx";
-import {CurdOrden} from "./views/CurdOrden.jsx";
-import {CurdCalidad} from "./views/CurdCalidad.jsx";
-import {AuthCorte} from "./middleware/AuthCorte.jsx";
-import {AuthAdmin} from "./middleware/AuthAdmin.jsx";
 
 function App() {
     useEffect(() => {
@@ -40,18 +33,9 @@ function App() {
                         <Route path={'/prenda/:id'} element={<Prenda/>}/>
                         <Route path={'/Menu'} element={<Menu/>}/>
                         <Route path={'/Editor'} element={<Editor/>}/>
-                        <Route path={'*'} element={<Navigate to={'/login'}/>}/>
+                        <Route path={'*'} element={<Navigate to={'/Menu'}/>}/>
                         <Route element={<AuthEdit/>}>
                             <Route path={'/NewGarment'} element={<NewGarment/>}/>
-                        </Route>
-                        <Route element={<AuthCorte/>}>
-                            <Route path={'/orden/corde'} element={<CurdOrden/>}/>
-                        </Route>
-                        <Route element={<AuthAdmin/>}>
-                            <Route path={'/provedores'} element={<Supplier/>}/>
-                            <Route path={'/productos'} element={<Productos/>}/>
-                            <Route path={'/movimientos'} element={<Movimientos/>}/>
-                            <Route path={'/calidad/corte'} element={<CurdCalidad/>}/>
                         </Route>
                     </Route>
                 </Routes>

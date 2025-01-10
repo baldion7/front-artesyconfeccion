@@ -10,10 +10,6 @@ export const AuthUser = ({children}) => {
       return children ? children : <Outlet/>
     case 'Editor':
       return children ? children : <Outlet/>
-    case 'Corte':
-      return children ? children : <Outlet/>
-    case 'Administrador':
-      return children ? children : <Outlet/>
     default:
       return <Navigate to={'/login'}/>
   }

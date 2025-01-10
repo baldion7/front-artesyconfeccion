@@ -35,10 +35,6 @@ export const Login = () => {
         return navigate('/Menu')
       case 'Editor':
         return navigate('/Editor')
-      case 'Corte':
-        return navigate('/orden/corde')
-      case 'Administrador':
-        return navigate('/calidad/corte')
       default:
         return
     }
