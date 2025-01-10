@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {Search, Plus, Pencil, ArrowLeft} from 'lucide-react';
 
-import {Button} from "../ui/Button.tsx";
+import {Button} from "../ui/button.tsx";
 import {Card, CardContent, CardHeader, CardTitle} from "../ui/card.tsx";
 import {Input} from "../ui/input.tsx";
 import {Textarea} from "../ui/Textarea.tsx";

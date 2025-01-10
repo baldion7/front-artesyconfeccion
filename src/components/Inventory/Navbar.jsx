@@ -7,7 +7,7 @@ import {
     Menu,
     X, LogOut
 } from 'lucide-react';
-import {Button} from "../ui/Button.tsx";
+import {Button} from "../ui/button.tsx";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {addUser} from "../../redux/slice/userSlice.js";

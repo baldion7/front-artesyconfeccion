@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Plus, Trash2} from 'lucide-react';
 import {Input} from '../../ui/input';
 import {Select} from "../../ui/Select.tsx";
-import {Button} from "../../ui/Button.tsx";
+import {Button} from "../../ui/button.tsx";
 
 const CardAssignment = ({detail, products, onAssignmentChange}) => {
     const [assignments, setAssignments] = useState({});

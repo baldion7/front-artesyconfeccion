@@ -1,6 +1,6 @@
     import React, { useEffect, useMemo, useState } from 'react';
     import { Search, Plus, Eye, Pencil, Trash2, ArrowLeft } from 'lucide-react';
-    import { Button } from "../ui/Button.tsx";
+    import { Button } from "../ui/button.tsx";
     import { Card, CardContent, CardHeader, CardTitle } from "../ui/card.tsx";
     import { Input } from "../ui/input.tsx";
     import SupplierModal from "./SupplierModal.jsx";
