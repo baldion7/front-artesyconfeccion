@@ -27,7 +27,6 @@ export const Login = () => {
   }
 
   useEffect(() => {
-    console.log(user.role)
     switch (user.role) {
       case 'Planta':
         return navigate('/Menu')
