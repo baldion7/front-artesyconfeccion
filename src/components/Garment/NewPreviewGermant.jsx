@@ -26,7 +26,7 @@ export const NewPreviewGermant = () => {
   const [garment, setGarment] = useState()
   const handleGarment = async (Name,Reference,Categoryid ) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/garment', {
+      const response = await fetch('https://confartex.com/api/garment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const sendGarment= () =>{
 
   const handleGarmentImg = async (Name, Image,Garment ) => {
     try {
-        const response = await fetch('https://arteyconfecciones.com/api/imggarment', {
+        const response = await fetch('https://confartex.com/api/imggarment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,13 +68,13 @@ const sendGarment= () =>{
   const loadImage = async () => {
     if (type === "front") {
       try {
-        setImage("https://arteyconfecciones.com/garments/" + category.description + '/' + name + '/general/' + inputFrontal);
+        setImage("https://confartex.com/garments/" + category.description + '/' + name + '/general/' + inputFrontal);
       } catch (error) {
         console.error('Error loading image:', error);
       }
     } else {
       try {
-        setImageBack("https://arteyconfecciones.com/garments/" + category.description + '/' + name + '/general/' + inputBack);
+        setImageBack("https://confartex.com/garments/" + category.description + '/' + name + '/general/' + inputBack);
       } catch (error) {
         console.error('Error loading image:', error);
       }

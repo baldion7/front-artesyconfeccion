@@ -47,7 +47,7 @@ export const Prenda = () => {
 
   }, [])
   useEffect(() => {
-    fetch('https://arteyconfecciones.com/api/garment/' + id)
+    fetch('https://confartex.com/api/garment/' + id)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -74,7 +74,7 @@ export const Prenda = () => {
   }, [garment])
   useEffect(() => {
     if (category) {
-      fetch('https://arteyconfecciones.com/api/garment')
+      fetch('https://confartex.com/api/garment')
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok')

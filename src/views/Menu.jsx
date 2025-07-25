@@ -26,7 +26,7 @@ export const Menu = () => {
   }
   useEffect(() => {
     if(category){
-      fetch('https://arteyconfecciones.com/api/category/'+category)
+      fetch('https://confartex.com/api/category/'+category)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -89,7 +89,7 @@ export const Menu = () => {
     const value=(e.target.value)
     if (value.length > 2){
       try {
-        const response = await fetch('https://arteyconfecciones.com/api/search/garment', {
+        const response = await fetch('https://confartex.com/api/search/garment', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
