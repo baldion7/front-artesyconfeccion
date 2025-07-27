@@ -1,3 +1,5 @@
+import {domain2} from "../../api/domain.js";
+
 export const ImgMoldesConteiner = ({molds}) => {
   return (
     <>
@@ -6,7 +8,7 @@ export const ImgMoldesConteiner = ({molds}) => {
         <div className="prueba" id="moldes">
 
           {molds && molds.length > 0 ? (
-            <img src={molds[0].img_route} alt="" loading="lazy" />
+            <img src={domain2+""+molds[0].img_route} alt="" loading="lazy" />
           ) : null}
         </div>
       </div>
