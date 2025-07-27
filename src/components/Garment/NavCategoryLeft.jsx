@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import domain from "../../api/domain.js";
 export const NavCategoryLeft = ({categorys}) => {
-  const user=useSelector((state)=>state.user.userState)
   const [category, setCategory] = useState(null)
   const SetCategorys=(id)=>{
     categorys(id)
   }
   useEffect(() => {
-      fetch('https://arteyconfecciones.com/api/category')
+      fetch(domain+'category')
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

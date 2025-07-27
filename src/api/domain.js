@@ -1,4 +1,2 @@
-const domain = 'https://portafolioapi.confartex.com/api/';
-
-
-export default domain
+export const domain = 'https://portafolioapi.confartex.com/api/';
+export const domain2 = 'https://confartex.com/';

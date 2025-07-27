@@ -2,7 +2,6 @@ import { CardGarment } from './CardGarment.jsx'
 import { NewCardGarments } from './NewCardGarments.jsx'
 import { useSelector } from 'react-redux'
 export const CardGarmentMenu = ({garment,numbeRamdon,search}) => {
-  console.log(numbeRamdon)
   const user=useSelector((state)=>state.user.userState)
   const NewGarment=garment
   const NewSearch=search

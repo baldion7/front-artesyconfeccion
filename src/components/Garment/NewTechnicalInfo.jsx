@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {domain} from "../../api/domain.js";
 
 export const NewTechnicalInfo = ({ garment, name }) => {
   const [numInputs, setNumInputs] = useState(0);
@@ -39,7 +40,7 @@ export const NewTechnicalInfo = ({ garment, name }) => {
 
   const handleTechnicalInfo = async (Name, Description, GarmentId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/technicalinfo', {
+      const response = await fetch(domain + 'technicalinfo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

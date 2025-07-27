@@ -1,4 +1,5 @@
 ﻿import React, { useEffect, useState } from 'react';
+import {domain, domain2} from "../../api/domain.js";
 
 export const NewDetailsGarment = ({ category, name, garment }) => {
   const [inputDetails, setInputDetails] = useState('');
@@ -16,7 +17,7 @@ export const NewDetailsGarment = ({ category, name, garment }) => {
 
   const handleBtnDetails = async (Name, GarmentId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/btndetails', {
+      const response = await fetch(domain+'btndetails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +33,7 @@ export const NewDetailsGarment = ({ category, name, garment }) => {
 
   const handleDetailGarment = async (Name, Image, BtndetailId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/imggarment/details', {
+      const response = await fetch(domain+'imggarment/details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +48,7 @@ export const NewDetailsGarment = ({ category, name, garment }) => {
 
   const handleArmedInfo = async (Name, Description, GarmentId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/armedinfo', {
+      const response = await fetch(domain+'armedinfo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +68,7 @@ export const NewDetailsGarment = ({ category, name, garment }) => {
 
   const handleAllowArmedInfo = async (ArmedInfoId, BtndetailId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/allowarmedInfo', {
+      const response = await fetch(domain+'allowarmedInfo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -83,7 +84,7 @@ export const NewDetailsGarment = ({ category, name, garment }) => {
   const loadImage = () => {
     try {
       setImage(
-        `https://arteyconfecciones.com/garments/${category.description}/${name}/detalles/${inputDetails}`
+          domain2+`${category.description}/${name}/detalles/${inputDetails}`
       );
     } catch (error) {
       console.error('Error al cargar la imagen:', error);

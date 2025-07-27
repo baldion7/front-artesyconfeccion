@@ -1,3 +1,5 @@
+import domain from "../../api/domain.js";
+
 export const ModalNewCategory = ({ SetNewCategory, NewCategory }) => {
   const setNewCategory = () => {
     SetNewCategory();
@@ -15,7 +17,7 @@ export const ModalNewCategory = ({ SetNewCategory, NewCategory }) => {
 
     // Realiza la solicitud a la API
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/category', {
+      const response = await fetch(domain+'category', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // Ajusta el tipo de contenido según tus necesidades
@@ -46,7 +48,7 @@ export const ModalNewCategory = ({ SetNewCategory, NewCategory }) => {
             <div>
               <div
                 className="form-category"
-                action="https://arteyconfecciones.com/api/category"
+                action={domain+"/category"}
                 method="POST"
                 onSubmit={handleSubmit}
               >

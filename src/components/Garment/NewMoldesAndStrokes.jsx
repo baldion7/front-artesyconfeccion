@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {domain, domain2} from "../../api/domain.js";
 
 export const NewMoldesAndStrokes = ({ name, category, garment }) => {
   const [imageMolde, setImageMolde] = useState();
@@ -7,11 +8,11 @@ export const NewMoldesAndStrokes = ({ name, category, garment }) => {
   const [nameStrokes, setNameStrokes] = useState('');
 
   useEffect(() => {
-    setImageStrokes(`https://arteyconfecciones.com/garments/${category}/${name}/molde/${nameStrokes}`);
+    setImageStrokes(domain2+`${category}/${name}/molde/${nameStrokes}`);
   }, [nameStrokes]);
 
   useEffect(() => {
-    setImageMolde(`https://arteyconfecciones.com/garments/${category}/${name}/molde/${nameMolde}`);
+    setImageMolde(domain2+`${category}/${name}/molde/${nameMolde}`);
   }, [nameMolde]);
 
   const sendMoldesAndStrokes = () => {
@@ -28,7 +29,7 @@ export const NewMoldesAndStrokes = ({ name, category, garment }) => {
   const handleImagenMoldesAndStrokes = async ({ molde, strokes, garment }) => {
     console.log(molde, strokes, garment);
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/models', {
+      const response = await fetch(domain + 'models', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

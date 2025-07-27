@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import '../../styles/drift-basic.css'
+import domain from "../../api/domain.js";
 export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
   const unmountRef = useRef();
   const [details, setDetails] = useState(null)
@@ -11,7 +12,7 @@ export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
 
     // Asigna la función de limpieza a la referencia
     unmountRef.current = clearDetails;
-      fetch('https://arteyconfecciones.com/api/btndetails/' + idDetails)
+      fetch(domain+'btndetails/' + idDetails)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok')

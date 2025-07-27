@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import {domain} from "../../api/domain.js";
 
 export const SelectCategory = ({ setCategory }) => {
   const [data, setData] = useState(null);
   const [selectedOption, setSelectedOption] = useState({ id: '', description: '' }); // Inicializar con valores vacíos
 
   const fetchData = async () => {
-    const response = await fetch("https://arteyconfecciones.com/api/category/");
+    const response = await fetch(domain+"category/");
     const data = await response.json();
 
     setData(data);

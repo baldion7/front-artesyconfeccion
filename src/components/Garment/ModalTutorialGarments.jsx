@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux'
 import { stateModalGarment } from '../../redux/slice/modalSlice.js'
-import { FaMagnifyingGlassPlus } from 'react-icons/fa6'
 
 export const ModalTutorialGarments = ({popup,popup_2,popup_3,CloseModal}) => {
   const dispatch = useDispatch()

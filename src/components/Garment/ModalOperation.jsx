@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useState} from "react";
+import domain from "../../api/domain.js";
 
 export const ModalOperation = ({NewOperation,SetNewOperation}) => {
     let { id } = useParams();
@@ -23,7 +24,7 @@ export const ModalOperation = ({NewOperation,SetNewOperation}) => {
         console.log(formData)
         // Realiza la solicitud a la API
         try {
-            const response = await fetch('https://arteyconfecciones.com/api/operatingprocess', {
+            const response = await fetch(domain+'operatingprocess', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // Ajusta el tipo de contenido según tus necesidades

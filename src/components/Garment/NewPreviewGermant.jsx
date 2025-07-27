@@ -6,6 +6,7 @@ import { NewOperatingProcesses } from './NewOperatingProcesses.jsx'
 import * as PropTypes from 'prop-types'
 import { NewTechnicalInfo } from './NewTechnicalInfo.jsx'
 import { NewMoldesAndStrokes } from './NewMoldesAndStrokes.jsx'
+import {domain, domain2} from "../../api/domain.js";
 
 function NewTechnicalInformation (props) {
   return null
@@ -26,7 +27,7 @@ export const NewPreviewGermant = () => {
   const [garment, setGarment] = useState()
   const handleGarment = async (Name,Reference,Categoryid ) => {
     try {
-      const response = await fetch('https://confartex.com/api/garment', {
+      const response = await fetch(domain+'garment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +53,7 @@ const sendGarment= () =>{
 
   const handleGarmentImg = async (Name, Image,Garment ) => {
     try {
-        const response = await fetch('https://confartex.com/api/imggarment', {
+        const response = await fetch(domain+'imggarment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,13 +69,13 @@ const sendGarment= () =>{
   const loadImage = async () => {
     if (type === "front") {
       try {
-        setImage("https://confartex.com/garments/" + category.description + '/' + name + '/general/' + inputFrontal);
+        setImage(domain2+"garments/" + category.description + '/' + name + '/general/' + inputFrontal);
       } catch (error) {
         console.error('Error loading image:', error);
       }
     } else {
       try {
-        setImageBack("https://confartex.com/garments/" + category.description + '/' + name + '/general/' + inputBack);
+        setImageBack(domain2+"garments/" + category.description + '/' + name + '/general/' + inputBack);
       } catch (error) {
         console.error('Error loading image:', error);
       }

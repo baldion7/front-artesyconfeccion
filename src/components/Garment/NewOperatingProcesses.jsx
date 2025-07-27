@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {domain} from "../../api/domain.js";
 
 export const NewOperatingProcesses = ({ garment, name }) => {
   const [numInputs, setNumInputs] = useState(0);
@@ -39,7 +40,7 @@ export const NewOperatingProcesses = ({ garment, name }) => {
 
   const handleOperatingProcess = async (Name, Description, GarmentId) => {
     try {
-      const response = await fetch('https://arteyconfecciones.com/api/operatingprocess', {
+      const response = await fetch(domain+'operatingprocess', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

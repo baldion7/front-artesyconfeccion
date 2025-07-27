@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useState} from "react";
+import domain from "../../api/domain.js";
 
 export const ModalInstructions = ({SetNewOperation,NewOperation}) => {
     let { id } = useParams();
@@ -23,7 +24,7 @@ export const ModalInstructions = ({SetNewOperation,NewOperation}) => {
         console.log(formData)
         // Realiza la solicitud a la API
         try {
-            const response = await fetch('https://arteyconfecciones.com/api/technicalinfo', {
+            const response = await fetch(domain+'technicalinfo', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // Ajusta el tipo de contenido según tus necesidades

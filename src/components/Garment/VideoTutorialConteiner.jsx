@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { PrintVideosTurorial } from './PrintVideosTurorial.jsx'
+import {domain} from "../../api/domain.js";
 
 export const VideoTutorialConteiner = ({ isVisible, setIsVisible, id, setMsg }) => {
   const [video, setVideo] = useState(null)
   const [displayImg, setDisplayImg] = useState(false)
   useEffect(() => {
-    fetch('https://arteyconfecciones.com/api/armaditutorials/')
+    fetch(domain + 'armaditutorials/')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
