@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import {domain2} from "../../api/domain.js";
 
 export const CardGarment = ({opcion,garment,img}) => {
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ export const CardGarment = ({opcion,garment,img}) => {
         <div className="card-label-container">
         <p className="card-label">{garment.Name ? garment.Name : opcion.category.Name}</p>
         </div>
-        <img src={img.img_route} loading="lazy" alt="Imagen frontal" />
+        <img src={domain2+img.img_route} loading="lazy" alt="Imagen frontal" />
       </div>
       <div className="card-info">
         <h3>{opcion.Name}</h3>
