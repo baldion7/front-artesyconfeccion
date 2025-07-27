@@ -1,4 +1,4 @@
-import {domain} from "../api/domain.js";
+import {domain} from "../../api/domain.js";
 
 export const ModalNewCategory = ({ SetNewCategory, NewCategory }) => {
   const setNewCategory = () => {

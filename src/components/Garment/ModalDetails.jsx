@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import '../../styles/drift-basic.css'
-import {domain} from "../api/domain.js";
+import {domain} from "../../api/domain.js";
 export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
   const unmountRef = useRef();
   const [details, setDetails] = useState(null)

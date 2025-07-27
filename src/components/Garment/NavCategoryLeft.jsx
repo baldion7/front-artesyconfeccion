@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {domain} from "../api/domain.js";
+import {domain} from "../../api/domain.js";
 export const NavCategoryLeft = ({categorys}) => {
   const [category, setCategory] = useState(null)
   const SetCategorys=(id)=>{
