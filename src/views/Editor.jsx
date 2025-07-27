@@ -6,7 +6,7 @@ import { CardGarmentMenu } from '../components/Garment/CardGarmentMenu.jsx'
 import { ModalLogout } from '../components/Garment/ModalLogout.jsx'
 import { ModalTutorialPageMenu } from '../components/Garment/ModalTutorialPageMenu.jsx'
 import { AlertError } from '../components/Garment/AlertError.jsx'
-import domain from "../api/domain.js";
+import {domain} from "../api/domain.js";
 export const Editor = () => {
   const [garment, setGarment] = useState(null)
   const [category, setCategory] = useState(null)

@@ -7,7 +7,7 @@ import { ModalTutorialPageMenu } from '../components/Garment/ModalTutorialPageMe
 import { useSelector } from 'react-redux'
 import { AlertError } from '../components/Garment/AlertError.jsx'
 import { ModalNewCategory } from '../components/Garment/ModalNewCategory.jsx'
-import domain from "../api/domain.js";
+import {domain} from "../api/domain.js";
 export const Menu = () => {
   const [garment, setGarment] = useState(null)
   const [NewCategory, setNewCategory] = useState()

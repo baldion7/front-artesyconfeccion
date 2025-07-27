@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { addUser } from '../redux/slice/userSlice.js'
 import { AlertError } from '../components/Garment/AlertError.jsx'
-import domain from "../api/domain.js";
+import {domain} from "../api/domain.js";
 
 
 export const Login = () => {

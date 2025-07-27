@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useState} from "react";
-import domain from "../../api/domain.js";
+import {domain} from "../api/domain.js";
 
 export const ModalInstructions = ({SetNewOperation,NewOperation}) => {
     let { id } = useParams();

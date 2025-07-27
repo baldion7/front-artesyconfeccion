@@ -17,7 +17,8 @@ import { BtnDetails } from '../components/Garment/BtnDetails.jsx'
 import { ImgTrazo } from '../components/Garment/ImgTrazo.jsx'
 import { ModalDetails } from '../components/Garment/ModalDetails.jsx'
 import { AlertError } from '../components/Garment/AlertError.jsx'
-import domain from "../api/domain.js";
+import {domain} from "../api/domain.js";
+
 
 export const Prenda = () => {
   const { id } = useParams()
