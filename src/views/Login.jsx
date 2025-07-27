@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { addUser } from '../redux/slice/userSlice.js'
 import { AlertError } from '../components/Garment/AlertError.jsx'
+import domain from "../api/domain.js";
 
 
 export const Login = () => {
@@ -42,7 +43,7 @@ export const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch('https://confartex.com/api/login', {
+      const response = await fetch(domain+'login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

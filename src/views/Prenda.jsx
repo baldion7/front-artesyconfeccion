@@ -17,6 +17,7 @@ import { BtnDetails } from '../components/Garment/BtnDetails.jsx'
 import { ImgTrazo } from '../components/Garment/ImgTrazo.jsx'
 import { ModalDetails } from '../components/Garment/ModalDetails.jsx'
 import { AlertError } from '../components/Garment/AlertError.jsx'
+import domain from "../api/domain.js";
 
 export const Prenda = () => {
   const { id } = useParams()
@@ -47,7 +48,7 @@ export const Prenda = () => {
 
   }, [])
   useEffect(() => {
-    fetch('https://confartex.com/api/garment/' + id)
+    fetch(domain+'garment/' + id)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -74,7 +75,7 @@ export const Prenda = () => {
   }, [garment])
   useEffect(() => {
     if (category) {
-      fetch('https://confartex.com/api/garment')
+      fetch(domain+'garment')
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok')
