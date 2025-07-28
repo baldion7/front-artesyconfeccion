@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import '../../styles/drift-basic.css'
-import {domain} from "../../api/domain.js";
+import {domain, domain2} from "../../api/domain.js";
 export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
   const unmountRef = useRef();
   const [details, setDetails] = useState(null)
@@ -61,12 +61,12 @@ export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
             <h2 className="card-title" id="modal_title"></h2>
             <div className="popup-body-video-container">
               <div className="popup-body-video popup-body-video-img" id="container_content_modal_img">
-                <img src={details && details.imgdetails[0].img_route} data-zoom={details && details.imgdetails[0].img_route}
+                <img src={details && domain2+details.imgdetails[0].img_route} data-zoom={details && details.imgdetails[0].img_route}
                      className="zoom-modal" alt="" loading="lazy"/>
               </div>
               <div className="container-content-modal-indications container-content-modal-indications-text">
                 <div className="popup-body-text" id="container_content_modal_indications" style={{color:'black'}}>
-                  {details && details.allowArmedInfos.map((item, index) => (
+                  {details && domain2+details.allowArmedInfos.map((item, index) => (
                     <label key={index} htmlFor="" style={{    display: 'inline-block'}}>
                       <i className="fa-solid fa-circle"></i> {item.armedInfo.Description}
                     </label>
