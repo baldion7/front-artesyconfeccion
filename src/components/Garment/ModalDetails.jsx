@@ -66,7 +66,7 @@ export const ModalDetails = ({modalDetails,setModalDetails,idDetails}) => {
               </div>
               <div className="container-content-modal-indications container-content-modal-indications-text">
                 <div className="popup-body-text" id="container_content_modal_indications" style={{color:'black'}}>
-                  {details && domain2+details.allowArmedInfos.map((item, index) => (
+                  {details && details.allowArmedInfos.map((item, index) => (
                     <label key={index} htmlFor="" style={{ display: 'inline-block'}}>
                       <i className="fa-solid fa-circle"></i> {item.armedInfo.Description}
                     </label>
